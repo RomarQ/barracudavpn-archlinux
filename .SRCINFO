@@ -1,0 +1,24 @@
+pkgbase = barracudavpn
+	pkgdesc = Barracuda VPN Client for Linux
+	pkgver = 5.0.2.7
+	pkgrel = 1
+	url = https://campus.barracuda.com/product/networkaccessclient
+	install = barracudavpn.install
+	arch = i386
+	arch = x86_64
+	license = custom:BarracudaVPN
+	depends = sh
+  depends = xterm
+	options = !strip
+  source = barracudavpn_32
+  source = barracudavpn_64
+	source = barracudavpn_32.desktop
+	source = barracudavpn_64.desktop
+	source = barracudavpn.png
+  sha256sums = bd521ef41083b074d50e466d1e5b3a1550d88ef6a87c1d6826dfd8408d0cd1c5
+  sha256sums = 6a6f4459d1b7c06266a7f8748aeed6059522e6b0646b0b0d7393c1da970b3322
+  sha256sums = b815d782fa4a3b70493abc875678251a3c8f8411cf1f00ef60c63fcf9da75e7d
+  sha256sums = 1225def0b5dac36dc4709b8f081d911a496aa2e436fe32edfb3ea7c4f0f0e441
+  sha256sums = 9a1494e98eaf46783eccce2bd1b537cf5ae158e5c9f55322e7b67da4dc1fd37a
+
+pkgname = barracudavpn
