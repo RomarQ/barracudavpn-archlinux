@@ -1,7 +1,6 @@
 # Maintainer: Rodrigo Quelhas <rodrigo_quelhas@outlook.pt>
-
+pkgver="5.1.4"
 pkgname="barracudavpn"
-pkgver="5.0.2.7"
 pkgrel="1"
 pkgdesc="Barracuda VPN Client for Linux"
 arch=("i386" "x86_64")
@@ -11,28 +10,16 @@ url="https://campus.barracuda.com/product/networkaccessclient"
 license=("custom:FortiClientSSLVPN")
 
 depends=(
-	"sh"
+  "sh"
   "xterm"
 )
 
 source=(
   "https://raw.githubusercontent.com/RomarQ/barracudavpn-archlinux/master/tarball/${pkgname}-${pkgver}.tar.gz"
 )
-sha256sums=('fb034907eed5a344ca324479df1e03652903c6b375bf506a6059fcac05a63113')
+sha256sums=('fe93d0a8b971b19d4d7f58edf5f688e92389082e407c1193e60ef2a2eac01c03')
 
-if   [ "$CARCH" = "i386"   ]; 
-then 
-
-  bin_location="usr/local/bin"
-  bin_file="barracudavpn_32"
-
-elif [ "$CARCH" = "x86_64" ];
-then 
-
-  bin_location="usr/bin"
-  bin_file="barracudavpn_64"
-
-fi
+bin_location="usr/bin"
 options=( !strip )
 
 package() {
@@ -42,7 +29,7 @@ package() {
 	mkdir -p ${pkgdir}/${bin_location}
 
 	msg "Installing files..."
-  install -Dm 4755 ${srcdir}/${pkgname}/${bin_file} ${pkgdir}/${bin_location}/${pkgname}
+  install -Dm 4755 ${srcdir}/${pkgname}/${pkgname} ${pkgdir}/${bin_location}/${pkgname}
 	install -Dm 4755 ${srcdir}/${pkgname}/${pkgname}.png ${pkgdir}/opt/${pkgname}/icons/
-	install -Dm 4755 ${srcdir}/${pkgname}/${bin_file}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
+	install -Dm 4755 ${srcdir}/${pkgname}/${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
 }
