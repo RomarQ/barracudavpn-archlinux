@@ -17,7 +17,7 @@ depends=(
 source=(
   "https://raw.githubusercontent.com/RomarQ/barracudavpn-archlinux/master/tarball/${pkgname}-${pkgver}.tar.gz"
 )
-sha256sums=('fe93d0a8b971b19d4d7f58edf5f688e92389082e407c1193e60ef2a2eac01c03')
+sha256sums=('66128019ca60c0b028b3e99293aea3c6cca1dd57d5d2d8fe51cf31994764fab7')
 
 bin_location="usr/bin"
 options=( !strip )
